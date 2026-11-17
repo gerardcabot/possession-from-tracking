@@ -162,7 +162,8 @@ exact Viterbi on strided steps, followed by frame-level boundary refinement. On 
 Viterbi stride and the switch-prior weight (0.1, 25 frames and 1.0 in the committed model) are
 chosen by nested leave-one-match-out cross-validation. Design and parameter origins:
 `docs/PARAMETERS.md` (section "Learned parameters"); the submitted technical document is
-`docs/technical_document.md` (listed under "What is in the repository" in `README.md`).
+`docs/Graciencs.md`, a short version of the full report `docs/technical_document.md` (both listed under
+"What is in the repository" in `README.md`).
 
 `possession.learned.train` needs the external caches (`docs/EXTERNAL.md`). The cleaning parameters
 are estimated from external DFL tracking and our match aggregates by `possession.external.prepare`

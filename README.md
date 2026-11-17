@@ -79,7 +79,7 @@ other matches only. `spellF1` is the ranking metric (possessions matched by temp
 
 These are estimates on other providers' data, degraded to resemble ours. They are not a score on the
 provided match. Per-match numbers, confidence intervals and what did not work are in the
-[technical document](docs/technical_document.md).
+[full report](docs/technical_document.md).
 
 ## Reproduce the submitted file
 
@@ -128,12 +128,14 @@ The full account is in [docs/COMPLIANCE.md](docs/COMPLIANCE.md).
 | `configs/` | Run configurations; `learned.json` is the submission |
 | `scripts/` | `reproduce_docker.sh` and the logged training runs |
 | `tests/` | Test suite (`.venv/bin/python -m pytest`) |
-| `docs/` | Technical document and the records behind every decision |
+| `docs/` | The submitted technical document, the full report and the records behind every decision |
 
 Documentation:
 
-- [Technical document](docs/technical_document.md), also as [PDF](docs/technical_document.pdf): method, data,
-  validation, limitations.
+- [Short technical document](docs/Graciencs.md), also as [PDF](docs/Graciencs.pdf): the submitted document,
+  three pages.
+- [Full report](docs/technical_document.md), also as [PDF](docs/technical_document.pdf): method, data,
+  validation, limitations, in detail.
 - [Usage reference](docs/USAGE.md): setup, every command, retraining.
 - [Parameters](docs/PARAMETERS.md): every parameter and where its value comes from.
 - [Dead-ball study](docs/DEADBALL.md): each model decision with its held-out numbers.
@@ -141,11 +143,12 @@ Documentation:
 - [Compliance](docs/COMPLIANCE.md), [ground-truth semantics](docs/GT_SEMANTICS.md) and the
   [original plan](docs/PLAN.md).
 
-The PDF is rendered from the Markdown with pandoc 3.10 and WeasyPrint 69:
+Both PDFs are rendered from their Markdown with pandoc 3.10 and WeasyPrint 69 (replace `Graciencs` with
+`technical_document` for the full report):
 
 ```bash
-pandoc docs/technical_document.md -f markdown+pipe_tables+fenced_code_blocks -t html5 -s --embed-resources \
-  --css docs/technical_document.css -o td.html && weasyprint td.html docs/technical_document.pdf
+pandoc docs/Graciencs.md -f markdown+pipe_tables+fenced_code_blocks -t html5 -s --embed-resources \
+  --css docs/technical_document.css -o td.html && weasyprint td.html docs/Graciencs.pdf
 ```
 
 ## Licence and data credits
