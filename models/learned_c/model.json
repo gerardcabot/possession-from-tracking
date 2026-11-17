@@ -1,0 +1,95 @@
+{
+  "cleaning": {
+    "ball_deviation_m": 1.06780147967683,
+    "ball_half_span": 1,
+    "ball_max_speed_mps": 35.71851760641819,
+    "duplicate_distance_m": 0.04123105625617702,
+    "max_gap_frames": 24,
+    "player_deviation_m": 0.41048751503546405,
+    "player_half_span": 1,
+    "player_max_speed_mps": 10.831089511217327
+  },
+  "dead_ball": {
+    "adaptation_iterations": 20,
+    "features": "players"
+  },
+  "dead_ball_features": 24,
+  "emission_weight": 0.5,
+  "features": 69,
+  "format": "learned-v6",
+  "frame_step": 1,
+  "held_out_summary": {
+    "dfl": {
+      "macro_f1": 0.8590955597692914,
+      "n_gt_spells": 437.2857142857143,
+      "n_matches": 7,
+      "n_pred_spells": 307.42857142857144,
+      "n_without_spells": 0,
+      "spell_bootstrap_high": 0.5524340736811734,
+      "spell_bootstrap_low": 0.4722136192541023,
+      "spell_f1_mean": 0.5121192799265973
+    },
+    "metrica": {
+      "macro_f1": 0.5592117499887688,
+      "n_gt_spells": 328.0,
+      "n_matches": 3,
+      "n_pred_spells": 271.0,
+      "n_without_spells": 0,
+      "spell_bootstrap_high": 0.6589900341081322,
+      "spell_bootstrap_low": 0.5680670601836245,
+      "spell_f1_mean": 0.6133333832720335
+    },
+    "metrica_raw": {
+      "macro_f1": 0.8936537746389576,
+      "n_gt_spells": 349.3333333333333,
+      "n_matches": 3,
+      "n_pred_spells": 310.3333333333333,
+      "n_without_spells": 0,
+      "spell_bootstrap_high": 0.7044407103604295,
+      "spell_bootstrap_low": 0.6231498963599288,
+      "spell_f1_mean": 0.6631945889152502
+    },
+    "pff": null,
+    "pff_raw": null,
+    "skillcorner": {
+      "macro_f1": 0.4563106136623098,
+      "n_gt_spells": 259.0,
+      "n_matches": 20,
+      "n_pred_spells": 296.25,
+      "n_without_spells": 0,
+      "spell_bootstrap_high": 0.3391967808575427,
+      "spell_bootstrap_low": 0.2646106730623391,
+      "spell_f1_mean": 0.3013243582786454
+    }
+  },
+  "iterations": [
+    100,
+    100
+  ],
+  "run_id": "8423be59edc54288fd1f821caa9b8abc9101d6d9888dfef6f81a5ff2d75de05e",
+  "scales": [
+    204,
+    602
+  ],
+  "seed": 0,
+  "sha256": "c8d48ccf346deaa00c146eb2f6f1481fb08d91f91f0209e422a5984bc4091054",
+  "sklearn": "1.9.1",
+  "stride": 5,
+  "training_matches": [
+    "dfl/J03WMX",
+    "dfl/J03WN1",
+    "dfl/J03WOH",
+    "dfl/J03WOY",
+    "dfl/J03WPY",
+    "dfl/J03WQQ",
+    "dfl/J03WR9",
+    "metrica/game1",
+    "metrica/game2",
+    "metrica/game3"
+  ],
+  "variant": "dfl+metrica",
+  "variant_sources": [
+    "dfl",
+    "metrica"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "classifier": {
+    "dead_context": true,
+    "every_peak": true,
+    "spell_weights": true,
+    "stopping": "team"
+  },
+  "cleaning": {
+    "ball_deviation_m": 1.06780147967683,
+    "ball_half_span": 1,
+    "ball_max_speed_mps": 35.71851760641819,
+    "duplicate_distance_m": 0.04123105625617702,
+    "max_gap_frames": 24,
+    "player_deviation_m": 0.41048751503546405,
+    "player_half_span": 1,
+    "player_max_speed_mps": 10.831089511217327
+  },
+  "dead_ball": {
+    "adaptation_iterations": 20,
+    "features": "players"
+  },
+  "dead_ball_features": 39,
+  "dead_context": {
+    "columns": 12,
+    "iterations": 100,
+    "scales": [
+      45,
+      101,
+      204,
+      602
+    ],
+    "stopping": "default"
+  },
+  "emission_weight": 0.1,
+  "features": 178,
+  "format": "learned-v8",
+  "frame_step": 1,
+  "grid": {
+    "emission_weights": [
+      0.01,
+      0.02,
+      0.04,
+      0.1,
+      0.2,
+      0.5,
+      1.0
+    ],
+    "strides": [
+      5,
+      10,
+      25,
+      50
+    ],
+    "switch_weights": [
+      0.0,
+      0.5,
+      1.0,
+      2.0
+    ]
+  },
+  "held_out_summary": {
+    "dfl": {
+      "macro_f1": 0.8813355969571202,
+      "n_gt_spells": 437.2857142857143,
+      "n_matches": 7,
+      "n_pred_spells": 321.0,
+      "n_without_spells": 0,
+      "spell_bootstrap_high": 0.6274793895766472,
+      "spell_bootstrap_low": 0.545954120260903,
+      "spell_f1_mean": 0.5871586090800951
+    },
+    "metrica": {
+      "macro_f1": 0.585761246344903,
+      "n_gt_spells": 328.0,
+      "n_matches": 3,
+      "n_pred_spells": 283.0,
+      "n_without_spells": 0,
+      "spell_bootstrap_high": 0.8109317571333005,
+      "spell_bootstrap_low": 0.7299604392857987,
+      "spell_f1_mean": 0.7714020516599586
+    },
+    "metrica_raw": {
+      "macro_f1": 0.9154684727125395,
+      "n_gt_spells": 349.3333333333333,
+      "n_matches": 3,
+      "n_pred_spells": 318.3333333333333,
+      "n_without_spells": 0,
+      "spell_bootstrap_high": 0.8188739209195015,
+      "spell_bootstrap_low": 0.7439879665571398,
+      "spell_f1_mean": 0.7821343298429076
+    },
+    "pff": null,
+    "pff_raw": null,
+    "skillcorner": {
+      "macro_f1": 0.4433301985713179,
+      "n_gt_spells": 259.0,
+      "n_matches": 20,
+      "n_pred_spells": 318.55,
+      "n_without_spells": 0,
+      "spell_bootstrap_high": 0.3553461069412963,
+      "spell_bootstrap_low": 0.2817290646714684,
+      "spell_f1_mean": 0.31828953736723004
+    }
+  },
+  "iterations": [
+    100,
+    124
+  ],
+  "line_features": [
+    "lines"
+  ],
+  "run_id": "98ffe80dc9f2c861b3249a9558b507abf6d0b75ed82e23fdf6ca0c2cf066cdd2",
+  "scales": [
+    204,
+    602
+  ],
+  "seed": 0,
+  "sha256": "f249108eca1c98df04b1a70c88d3b5b70cb150dcc6e59a4d7783e508fbc4198f",
+  "short_scales": [
+    45,
+    101
+  ],
+  "sklearn": "1.9.1",
+  "stopping": [
+    "default",
+    "grouped"
+  ],
+  "stride": 25,
+  "switch_prior": true,
+  "switch_prior_peaks": 16209,
+  "switch_prior_rows": 1641294,
+  "switch_prior_threshold": 11.839151382446289,
+  "switch_weight": 1.0,
+  "touch_evidence_peaks": 16209,
+  "touch_features": true,
+  "touch_threshold": 0.0,
+  "training_matches": [
+    "dfl/J03WMX",
+    "dfl/J03WN1",
+    "dfl/J03WOH",
+    "dfl/J03WOY",
+    "dfl/J03WPY",
+    "dfl/J03WQQ",
+    "dfl/J03WR9",
+    "metrica/game1",
+    "metrica/game2",
+    "metrica/game3"
+  ],
+  "variant": "dfl+metrica",
+  "variant_sources": [
+    "dfl",
+    "metrica"
+  ]
+}

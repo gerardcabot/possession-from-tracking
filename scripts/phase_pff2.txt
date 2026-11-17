@@ -1,0 +1,4 @@
+.venv/bin/python -m possession.learned.train --variants dfl+metrica+pff_ha --dead-features players --adaptation --team-features touch --spell-weights --every-peak --stopping team --out models/learned_pff/model.pkl
+.venv/bin/python -m possession.run --config configs/learned.json --model models/learned_pff/model.pkl --out outputs/learned_pff.csv
+.venv/bin/python src/possession/vendor/validate_submission.py outputs/learned_pff.csv
+.venv/bin/python -m possession.diagnostics --model models/learned_pff/model.pkl --submission outputs/learned_pff.csv --submission outputs/learned_cls.csv

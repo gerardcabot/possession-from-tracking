@@ -1,0 +1,5 @@
+.venv/bin/python -m possession.learned.train --variants metrica --matches metrica/game1,metrica/game2 --dead-features players --adaptation --team-features touch --spell-weights --every-peak --stopping team --frame-step 20 --out models/smoke_cls/model.pkl
+.venv/bin/python -m possession.learned.train --variants dfl+metrica --dead-features players --adaptation --team-features touch --spell-weights --every-peak --stopping team --out models/learned_cls/model.pkl
+.venv/bin/python -m possession.run --config configs/learned.json --model models/learned_cls/model.pkl --out outputs/learned_cls.csv
+.venv/bin/python src/possession/vendor/validate_submission.py outputs/learned_cls.csv
+.venv/bin/python -m possession.diagnostics --model models/learned_cls/model.pkl --submission outputs/learned_cls.csv

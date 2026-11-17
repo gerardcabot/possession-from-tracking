@@ -1,0 +1,17 @@
+.git
+.venv/
+data/
+outputs/
+cache/
+models/*/folds/
+models/learned_s*/
+models/smoke_ext/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+*.npz
+*.csv
+*.mp4
+*.pdf
+.DS_Store

@@ -1,0 +1,3 @@
+git describe --tags --exact-match
+shasum -a 256 models/learned/model.pkl outputs/learned_final.csv
+.venv/bin/python -m possession.evaluate outputs/learned_final.csv

@@ -1,0 +1,1317 @@
+{
+  "format": "learned-v6",
+  "seed": 0,
+  "model_seed": 0,
+  "frame_step": 1,
+  "bootstrap_draws": 1000,
+  "grid": [
+    {
+      "emission_weight": 1.0,
+      "stride": 5
+    },
+    {
+      "emission_weight": 1.0,
+      "stride": 10
+    },
+    {
+      "emission_weight": 1.0,
+      "stride": 25
+    },
+    {
+      "emission_weight": 0.5,
+      "stride": 5
+    },
+    {
+      "emission_weight": 0.5,
+      "stride": 10
+    },
+    {
+      "emission_weight": 0.5,
+      "stride": 25
+    },
+    {
+      "emission_weight": 0.2,
+      "stride": 5
+    },
+    {
+      "emission_weight": 0.2,
+      "stride": 10
+    },
+    {
+      "emission_weight": 0.2,
+      "stride": 25
+    },
+    {
+      "emission_weight": 0.1,
+      "stride": 5
+    },
+    {
+      "emission_weight": 0.1,
+      "stride": 10
+    },
+    {
+      "emission_weight": 0.1,
+      "stride": 25
+    },
+    {
+      "emission_weight": 0.04,
+      "stride": 5
+    },
+    {
+      "emission_weight": 0.04,
+      "stride": 10
+    },
+    {
+      "emission_weight": 0.04,
+      "stride": 25
+    },
+    {
+      "emission_weight": 0.02,
+      "stride": 5
+    },
+    {
+      "emission_weight": 0.02,
+      "stride": 10
+    },
+    {
+      "emission_weight": 0.02,
+      "stride": 25
+    },
+    {
+      "emission_weight": 0.01,
+      "stride": 5
+    },
+    {
+      "emission_weight": 0.01,
+      "stride": 10
+    },
+    {
+      "emission_weight": 0.01,
+      "stride": 25
+    }
+  ],
+  "variants": [
+    "dfl+metrica"
+  ],
+  "selection_score": "raw",
+  "dead_ball": {
+    "features": "players",
+    "adaptation_iterations": 20
+  },
+  "variant": "dfl+metrica",
+  "matches": [
+    "dfl/J03WMX",
+    "dfl/J03WN1",
+    "dfl/J03WOH",
+    "dfl/J03WOY",
+    "dfl/J03WPY",
+    "dfl/J03WQQ",
+    "dfl/J03WR9",
+    "metrica/game1",
+    "metrica/game2",
+    "metrica/game3"
+  ],
+  "cleaning": {
+    "ball_max_speed_mps": 35.71851760641819,
+    "ball_deviation_m": 1.06780147967683,
+    "player_max_speed_mps": 10.831089511217327,
+    "player_deviation_m": 0.41048751503546405,
+    "duplicate_distance_m": 0.04123105625617702,
+    "max_gap_frames": 24,
+    "ball_half_span": 1,
+    "player_half_span": 1
+  },
+  "run_id": "8423be59edc54288fd1f821caa9b8abc9101d6d9888dfef6f81a5ff2d75de05e",
+  "model_sha256": "c8d48ccf346deaa00c146eb2f6f1481fb08d91f91f0209e422a5984bc4091054",
+  "selection_rule": {
+    "primary": "metrica raw spell_f1_mean",
+    "tie": "interval of the mean (mean of the per-match bootstrap 5-95 lower and upper bounds) reaches the best variant's lower bound",
+    "order": [
+      "metrica_raw",
+      "dfl",
+      "skillcorner"
+    ]
+  },
+  "variant_results": {
+    "dfl+metrica": {
+      "sources": [
+        "dfl",
+        "metrica"
+      ],
+      "matches": [
+        "dfl/J03WMX",
+        "dfl/J03WN1",
+        "dfl/J03WOH",
+        "dfl/J03WOY",
+        "dfl/J03WPY",
+        "dfl/J03WQQ",
+        "dfl/J03WR9",
+        "metrica/game1",
+        "metrica/game2",
+        "metrica/game3"
+      ],
+      "selected": {
+        "emission_weight": 0.5,
+        "stride": 5
+      },
+      "scales": [
+        204,
+        602
+      ],
+      "summary": {
+        "dfl": {
+          "spell_f1_mean": 0.5121192799265973,
+          "macro_f1": 0.8590955597692914,
+          "n_pred_spells": 307.42857142857144,
+          "n_gt_spells": 437.2857142857143,
+          "spell_bootstrap_low": 0.4722136192541023,
+          "spell_bootstrap_high": 0.5524340736811734,
+          "n_matches": 7,
+          "n_without_spells": 0
+        },
+        "metrica": {
+          "spell_f1_mean": 0.6133333832720335,
+          "macro_f1": 0.5592117499887688,
+          "n_pred_spells": 271.0,
+          "n_gt_spells": 328.0,
+          "spell_bootstrap_low": 0.5680670601836245,
+          "spell_bootstrap_high": 0.6589900341081322,
+          "n_matches": 3,
+          "n_without_spells": 0
+        },
+        "skillcorner": {
+          "spell_f1_mean": 0.3013243582786454,
+          "macro_f1": 0.4563106136623098,
+          "n_pred_spells": 296.25,
+          "n_gt_spells": 259.0,
+          "spell_bootstrap_low": 0.2646106730623391,
+          "spell_bootstrap_high": 0.3391967808575427,
+          "n_matches": 20,
+          "n_without_spells": 0
+        },
+        "pff": null,
+        "metrica_raw": {
+          "spell_f1_mean": 0.6631945889152502,
+          "macro_f1": 0.8936537746389576,
+          "n_pred_spells": 310.3333333333333,
+          "n_gt_spells": 349.3333333333333,
+          "spell_bootstrap_low": 0.6231498963599288,
+          "spell_bootstrap_high": 0.7044407103604295,
+          "n_matches": 3,
+          "n_without_spells": 0
+        },
+        "pff_raw": null
+      },
+      "held_out": [
+        {
+          "match": "dfl/J03WMX",
+          "source": "dfl",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.44691358024691363,
+            "macro_f1": 0.8545006023851055,
+            "n_pred_spells": 299.0,
+            "n_gt_spells": 511.0,
+            "spell_bootstrap_low": 0.40839506172839507,
+            "spell_bootstrap_high": 0.4874320987654321
+          },
+          "fair": null,
+          "adaptation": {
+            "iterations": 11,
+            "converged": true,
+            "final_share": 0.4009585138128648,
+            "shares": [
+              0.41414886362315056,
+              0.41938219565450346,
+              0.4152175217241241,
+              0.41227943695033675,
+              0.4090652691541344,
+              0.4061017431239995,
+              0.4042579517505707,
+              0.40310585337451926,
+              0.40098880974635875,
+              0.40253369276588147,
+              0.40078054095998655,
+              0.4009585138128648
+            ]
+          }
+        },
+        {
+          "match": "dfl/J03WN1",
+          "source": "dfl",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.4615384615384615,
+            "macro_f1": 0.8395007984219526,
+            "n_pred_spells": 319.0,
+            "n_gt_spells": 500.0,
+            "spell_bootstrap_low": 0.4239316239316239,
+            "spell_bootstrap_high": 0.49819291819291817
+          },
+          "fair": null,
+          "adaptation": {
+            "iterations": 8,
+            "converged": true,
+            "final_share": 0.5332773331372916,
+            "shares": [
+              0.5263602962466131,
+              0.532583509769546,
+              0.5347047747135535,
+              0.5392299861903246,
+              0.5342708236045673,
+              0.5334808889155803,
+              0.5298902717111221,
+              0.5329609241111003,
+              0.5332773331372916
+            ]
+          }
+        },
+        {
+          "match": "dfl/J03WOH",
+          "source": "dfl",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.5377713458755427,
+            "macro_f1": 0.865718923640113,
+            "n_pred_spells": 289.0,
+            "n_gt_spells": 402.0,
+            "spell_bootstrap_low": 0.49319826338639655,
+            "spell_bootstrap_high": 0.5789001447178004
+          },
+          "fair": null,
+          "adaptation": {
+            "iterations": 7,
+            "converged": true,
+            "final_share": 0.4716177660006331,
+            "shares": [
+              0.45172990161515225,
+              0.4575378309795938,
+              0.46554658952071293,
+              0.470815310973641,
+              0.4723184727690515,
+              0.4709303733124532,
+              0.4713867720173077,
+              0.4716177660006331
+            ]
+          }
+        },
+        {
+          "match": "dfl/J03WOY",
+          "source": "dfl",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.5297560975609755,
+            "macro_f1": 0.8442650864815237,
+            "n_pred_spells": 364.0,
+            "n_gt_spells": 456.0,
+            "spell_bootstrap_low": 0.49073170731707316,
+            "spell_bootstrap_high": 0.5673170731707317
+          },
+          "fair": null,
+          "adaptation": {
+            "iterations": 5,
+            "converged": true,
+            "final_share": 0.425424912715555,
+            "shares": [
+              0.4171499186938118,
+              0.41776221509225375,
+              0.421867156262135,
+              0.4191728210223529,
+              0.4249838967298426,
+              0.425424912715555
+            ]
+          }
+        },
+        {
+          "match": "dfl/J03WPY",
+          "source": "dfl",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.5065155807365439,
+            "macro_f1": 0.8640442534833895,
+            "n_pred_spells": 285.0,
+            "n_gt_spells": 421.0,
+            "spell_bootstrap_low": 0.46515580736543916,
+            "spell_bootstrap_high": 0.5495750708215297
+          },
+          "fair": null,
+          "adaptation": {
+            "iterations": 2,
+            "converged": true,
+            "final_share": 0.43267549990160464,
+            "shares": [
+              0.42259372781493965,
+              0.4330399362674267,
+              0.43267549990160464
+            ]
+          }
+        },
+        {
+          "match": "dfl/J03WQQ",
+          "source": "dfl",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.5446111869031378,
+            "macro_f1": 0.8652977023967784,
+            "n_pred_spells": 332.0,
+            "n_gt_spells": 401.0,
+            "spell_bootstrap_low": 0.5079945429740791,
+            "spell_bootstrap_high": 0.5811732605729877
+          },
+          "fair": null,
+          "adaptation": {
+            "iterations": 6,
+            "converged": true,
+            "final_share": 0.3844501483975246,
+            "shares": [
+              0.38535467484328245,
+              0.3883961038519981,
+              0.38707193870617396,
+              0.38621088403803383,
+              0.38560358209105416,
+              0.3848942595893704,
+              0.3844501483975246
+            ]
+          }
+        },
+        {
+          "match": "dfl/J03WR9",
+          "source": "dfl",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.5577287066246057,
+            "macro_f1": 0.8803415515761778,
+            "n_pred_spells": 264.0,
+            "n_gt_spells": 370.0,
+            "spell_bootstrap_low": 0.5160883280757098,
+            "spell_bootstrap_high": 0.6044479495268138
+          },
+          "fair": null,
+          "adaptation": {
+            "iterations": 1,
+            "converged": true,
+            "final_share": 0.42411612945070615,
+            "shares": [
+              0.42426186547242745,
+              0.42411612945070615
+            ]
+          }
+        },
+        {
+          "match": "metrica/game1",
+          "source": "metrica",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.7077389984825493,
+            "macro_f1": 0.9111406736898329,
+            "n_pred_spells": 309.0,
+            "n_gt_spells": 350.0,
+            "spell_bootstrap_low": 0.6658573596358119,
+            "spell_bootstrap_high": 0.7484370257966617
+          },
+          "fair": {
+            "spell_f1_mean": 0.6406837606837605,
+            "macro_f1": 0.5404076617351131,
+            "n_pred_spells": 259.0,
+            "n_gt_spells": 326.0,
+            "spell_bootstrap_low": 0.5941880341880342,
+            "spell_bootstrap_high": 0.6885470085470086
+          },
+          "adaptation": {
+            "iterations": 10,
+            "converged": true,
+            "final_share": 0.4516678858221649,
+            "shares": [
+              0.46898284066629253,
+              0.46209768882064384,
+              0.4629610054799673,
+              0.4616828330193888,
+              0.46048014134175047,
+              0.4564059057472098,
+              0.456702277237978,
+              0.45415876703699737,
+              0.453301599595712,
+              0.45179945863688104,
+              0.4516678858221649
+            ]
+          }
+        },
+        {
+          "match": "metrica/game2",
+          "source": "metrica",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.6752827140549273,
+            "macro_f1": 0.9056791441166121,
+            "n_pred_spells": 299.0,
+            "n_gt_spells": 320.0,
+            "spell_bootstrap_low": 0.6358319870759288,
+            "spell_bootstrap_high": 0.7166397415185783
+          },
+          "fair": {
+            "spell_f1_mean": 0.6342857142857141,
+            "macro_f1": 0.5844713031924073,
+            "n_pred_spells": 264.0,
+            "n_gt_spells": 296.0,
+            "spell_bootstrap_low": 0.5885714285714285,
+            "spell_bootstrap_high": 0.6786071428571429
+          },
+          "adaptation": {
+            "iterations": 20,
+            "converged": false,
+            "final_share": 0.4104085953913858,
+            "shares": [
+              0.44423292074744924,
+              0.4357487593569891,
+              0.43071389787826714,
+              0.42478583985153484,
+              0.421570911366167,
+              0.4196695124502433,
+              0.41468901286310816,
+              0.41391864432789566,
+              0.41234766195725264,
+              0.41349998189445925,
+              0.41181503529625746,
+              0.4102682116444422,
+              0.4130062137105111,
+              0.4102651620710416,
+              0.40610290351334305,
+              0.408417876139529,
+              0.40964349287521507,
+              0.4091486702295003,
+              0.40704558951362135,
+              0.4065906999630854,
+              0.4104085953913858
+            ]
+          }
+        },
+        {
+          "match": "metrica/game3",
+          "source": "metrica",
+          "held_out_by": "fold",
+          "group": [],
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.6065620542082739,
+            "macro_f1": 0.8641415061104278,
+            "n_pred_spells": 323.0,
+            "n_gt_spells": 378.0,
+            "spell_bootstrap_low": 0.5677603423680457,
+            "spell_bootstrap_high": 0.6482453637660485
+          },
+          "fair": {
+            "spell_f1_mean": 0.5650306748466258,
+            "macro_f1": 0.552756285038786,
+            "n_pred_spells": 290.0,
+            "n_gt_spells": 362.0,
+            "spell_bootstrap_low": 0.521441717791411,
+            "spell_bootstrap_high": 0.6098159509202453
+          },
+          "adaptation": {
+            "iterations": 6,
+            "converged": true,
+            "final_share": 0.3182158622145326,
+            "shares": [
+              0.3363676478090424,
+              0.31113849163048807,
+              0.3129872822764847,
+              0.31122220802264156,
+              0.316968212095749,
+              0.31784409500948774,
+              0.3182158622145326
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1874553",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.2893481717011129,
+            "macro_f1": 0.42050639937007533,
+            "n_pred_spells": 362.0,
+            "n_gt_spells": 267.0,
+            "spell_bootstrap_low": 0.2575516693163752,
+            "spell_bootstrap_high": 0.32241653418124006
+          },
+          "fair": {
+            "spell_f1_mean": 0.35158286778398506,
+            "macro_f1": 0.4441524491546795,
+            "n_pred_spells": 270.0,
+            "n_gt_spells": 267.0,
+            "spell_bootstrap_low": 0.31508379888268156,
+            "spell_bootstrap_high": 0.39184357541899434
+          },
+          "adaptation": {
+            "iterations": 10,
+            "converged": true,
+            "final_share": 0.20999993864473945,
+            "shares": [
+              0.26184870643522207,
+              0.22721830905742096,
+              0.21620249850386009,
+              0.21318866981605225,
+              0.21088198179679982,
+              0.20989728728963986,
+              0.2079480122351491,
+              0.20869860716830707,
+              0.2091436514225731,
+              0.20998480491702415,
+              0.20999993864473945
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1886347",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.22383107088989446,
+            "macro_f1": 0.4296159746267141,
+            "n_pred_spells": 391.0,
+            "n_gt_spells": 272.0,
+            "spell_bootstrap_low": 0.19547511312217195,
+            "spell_bootstrap_high": 0.25279034690799396
+          },
+          "fair": {
+            "spell_f1_mean": 0.28502581755593803,
+            "macro_f1": 0.46738066835763487,
+            "n_pred_spells": 309.0,
+            "n_gt_spells": 272.0,
+            "spell_bootstrap_low": 0.2492254733218589,
+            "spell_bootstrap_high": 0.3215146299483649
+          },
+          "adaptation": {
+            "iterations": 9,
+            "converged": true,
+            "final_share": 0.22372253432452296,
+            "shares": [
+              0.2778656975773036,
+              0.24609969159181452,
+              0.23388481679601955,
+              0.22935833870212846,
+              0.2266479111868993,
+              0.22589991066448797,
+              0.22514505037594565,
+              0.22431636557556978,
+              0.22387538471064197,
+              0.22372253432452296
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1899585",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.22839694656488554,
+            "macro_f1": 0.39262359186070267,
+            "n_pred_spells": 416.0,
+            "n_gt_spells": 239.0,
+            "spell_bootstrap_low": 0.19905343511450382,
+            "spell_bootstrap_high": 0.2589312977099237
+          },
+          "fair": {
+            "spell_f1_mean": 0.27301587301587305,
+            "macro_f1": 0.43400652156256253,
+            "n_pred_spells": 328.0,
+            "n_gt_spells": 239.0,
+            "spell_bootstrap_low": 0.23985890652557318,
+            "spell_bootstrap_high": 0.30687830687830686
+          },
+          "adaptation": {
+            "iterations": 7,
+            "converged": true,
+            "final_share": 0.23456491685971087,
+            "shares": [
+              0.29251317355366957,
+              0.25405117426608725,
+              0.24238143588392638,
+              0.2385375349252338,
+              0.2373452487280298,
+              0.23534524972394516,
+              0.23470770989250805,
+              0.23456491685971087
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1925299",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.27341772151898736,
+            "macro_f1": 0.42208534423492594,
+            "n_pred_spells": 364.0,
+            "n_gt_spells": 268.0,
+            "spell_bootstrap_low": 0.23987341772151902,
+            "spell_bootstrap_high": 0.3075949367088608
+          },
+          "fair": {
+            "spell_f1_mean": 0.33795620437956203,
+            "macro_f1": 0.472115100185811,
+            "n_pred_spells": 280.0,
+            "n_gt_spells": 268.0,
+            "spell_bootstrap_low": 0.2978102189781022,
+            "spell_bootstrap_high": 0.3773722627737226
+          },
+          "adaptation": {
+            "iterations": 7,
+            "converged": true,
+            "final_share": 0.24359228508847333,
+            "shares": [
+              0.2967353273447594,
+              0.2733854292145486,
+              0.25994600621005676,
+              0.2535819265780461,
+              0.24928499603323767,
+              0.24726232668467987,
+              0.24367573854086952,
+              0.24359228508847333
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1927964",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.2739526411657559,
+            "macro_f1": 0.4639431496249822,
+            "n_pred_spells": 323.0,
+            "n_gt_spells": 226.0,
+            "spell_bootstrap_low": 0.23897996357012746,
+            "spell_bootstrap_high": 0.31041894353369764
+          },
+          "fair": {
+            "spell_f1_mean": 0.35126050420168065,
+            "macro_f1": 0.4991369479970807,
+            "n_pred_spells": 250.0,
+            "n_gt_spells": 226.0,
+            "spell_bootstrap_low": 0.3117226890756302,
+            "spell_bootstrap_high": 0.3957983193277311
+          },
+          "adaptation": {
+            "iterations": 6,
+            "converged": true,
+            "final_share": 0.20289344464041206,
+            "shares": [
+              0.27729911260258844,
+              0.23063584953985786,
+              0.2123072532827539,
+              0.20582705998707038,
+              0.20400483000783895,
+              0.20304792065812893,
+              0.20289344464041206
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1953632",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.22190305206463196,
+            "macro_f1": 0.44718584190828164,
+            "n_pred_spells": 321.0,
+            "n_gt_spells": 236.0,
+            "spell_bootstrap_low": 0.18955116696588867,
+            "spell_bootstrap_high": 0.25565529622980254
+          },
+          "fair": {
+            "spell_f1_mean": 0.29979633401221994,
+            "macro_f1": 0.4986176615539201,
+            "n_pred_spells": 255.0,
+            "n_gt_spells": 236.0,
+            "spell_bootstrap_low": 0.2590631364562118,
+            "spell_bootstrap_high": 0.34134419551934825
+          },
+          "adaptation": {
+            "iterations": 5,
+            "converged": true,
+            "final_share": 0.21401152929316303,
+            "shares": [
+              0.26620372457950997,
+              0.2302635454535852,
+              0.22145467784704592,
+              0.2173000914095184,
+              0.21408256614134924,
+              0.21401152929316303
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1959846",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.24713375796178344,
+            "macro_f1": 0.41286006024870286,
+            "n_pred_spells": 373.0,
+            "n_gt_spells": 255.0,
+            "spell_bootstrap_low": 0.21780254777070066,
+            "spell_bootstrap_high": 0.27961783439490445
+          },
+          "fair": {
+            "spell_f1_mean": 0.2897579143389199,
+            "macro_f1": 0.4450289204558697,
+            "n_pred_spells": 282.0,
+            "n_gt_spells": 255.0,
+            "spell_bootstrap_low": 0.2539664804469273,
+            "spell_bootstrap_high": 0.3307262569832402
+          },
+          "adaptation": {
+            "iterations": 6,
+            "converged": true,
+            "final_share": 0.2447692499559997,
+            "shares": [
+              0.3023659271119697,
+              0.26206093105525297,
+              0.25227550465807724,
+              0.2495439995644408,
+              0.24658342668651698,
+              0.24491516804762564,
+              0.2447692499559997
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1986691",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.26308724832214764,
+            "macro_f1": 0.40455879580451465,
+            "n_pred_spells": 362.0,
+            "n_gt_spells": 234.0,
+            "spell_bootstrap_low": 0.23288590604026846,
+            "spell_bootstrap_high": 0.29600671140939594
+          },
+          "fair": {
+            "spell_f1_mean": 0.33599999999999997,
+            "macro_f1": 0.4619988690171491,
+            "n_pred_spells": 291.0,
+            "n_gt_spells": 234.0,
+            "spell_bootstrap_low": 0.29866666666666664,
+            "spell_bootstrap_high": 0.37260952380952383
+          },
+          "adaptation": {
+            "iterations": 6,
+            "converged": true,
+            "final_share": 0.29281743006797795,
+            "shares": [
+              0.3368837636223448,
+              0.30998370336634534,
+              0.30133617129432333,
+              0.2971946460436585,
+              0.2954859134516393,
+              0.29277659766932496,
+              0.29281743006797795
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1996435",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.2313953488372093,
+            "macro_f1": 0.416199173333115,
+            "n_pred_spells": 384.0,
+            "n_gt_spells": 304.0,
+            "spell_bootstrap_low": 0.20116279069767443,
+            "spell_bootstrap_high": 0.2633720930232558
+          },
+          "fair": {
+            "spell_f1_mean": 0.27595356550580435,
+            "macro_f1": 0.455928219875444,
+            "n_pred_spells": 299.0,
+            "n_gt_spells": 304.0,
+            "spell_bootstrap_low": 0.2414593698175788,
+            "spell_bootstrap_high": 0.31048092868988386
+          },
+          "adaptation": {
+            "iterations": 8,
+            "converged": true,
+            "final_share": 0.24658873065051895,
+            "shares": [
+              0.3031840397897713,
+              0.2695822478227299,
+              0.2592092447810851,
+              0.252883206986459,
+              0.25097027499071767,
+              0.248939184631297,
+              0.2482952896804598,
+              0.24689795516162527,
+              0.24658873065051895
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/1996436",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.18518518518518517,
+            "macro_f1": 0.37954238929155815,
+            "n_pred_spells": 411.0,
+            "n_gt_spells": 237.0,
+            "spell_bootstrap_low": 0.15740740740740738,
+            "spell_bootstrap_high": 0.21234567901234563
+          },
+          "fair": {
+            "spell_f1_mean": 0.2592057761732852,
+            "macro_f1": 0.427391335142798,
+            "n_pred_spells": 317.0,
+            "n_gt_spells": 237.0,
+            "spell_bootstrap_low": 0.2252707581227437,
+            "spell_bootstrap_high": 0.2967509025270758
+          },
+          "adaptation": {
+            "iterations": 13,
+            "converged": true,
+            "final_share": 0.3248535659600223,
+            "shares": [
+              0.3637258848608073,
+              0.33397559220728473,
+              0.33152629776251297,
+              0.32592387325017513,
+              0.32507430996468795,
+              0.3191036908382127,
+              0.3221364175303707,
+              0.31772044098958846,
+              0.32033374871050874,
+              0.3196412725659411,
+              0.32101819648634033,
+              0.3213931014737519,
+              0.32451016097198404,
+              0.3248535659600223
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2006229",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.25521885521885523,
+            "macro_f1": 0.4529384485178681,
+            "n_pred_spells": 325.0,
+            "n_gt_spells": 269.0,
+            "spell_bootstrap_low": 0.22289562289562292,
+            "spell_bootstrap_high": 0.29225589225589227
+          },
+          "fair": {
+            "spell_f1_mean": 0.3011583011583011,
+            "macro_f1": 0.4843505394493199,
+            "n_pred_spells": 249.0,
+            "n_gt_spells": 269.0,
+            "spell_bootstrap_low": 0.2602316602316602,
+            "spell_bootstrap_high": 0.34057915057915056
+          },
+          "adaptation": {
+            "iterations": 7,
+            "converged": true,
+            "final_share": 0.22268551259217018,
+            "shares": [
+              0.26294081141325004,
+              0.23383202067410447,
+              0.2281552641096312,
+              0.22563863289745728,
+              0.2240033384609117,
+              0.22359517322004857,
+              0.22257014520206833,
+              0.22268551259217018
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2006363",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.24674085850556438,
+            "macro_f1": 0.43386101823767403,
+            "n_pred_spells": 344.0,
+            "n_gt_spells": 285.0,
+            "spell_bootstrap_low": 0.21558028616852148,
+            "spell_bootstrap_high": 0.2772972972972973
+          },
+          "fair": {
+            "spell_f1_mean": 0.3138240574506284,
+            "macro_f1": 0.4714410278794737,
+            "n_pred_spells": 272.0,
+            "n_gt_spells": 285.0,
+            "spell_bootstrap_low": 0.27429084380610413,
+            "spell_bootstrap_high": 0.35332136445242374
+          },
+          "adaptation": {
+            "iterations": 8,
+            "converged": true,
+            "final_share": 0.2345016280402548,
+            "shares": [
+              0.3011124655014379,
+              0.2606984594065554,
+              0.25467694110239064,
+              0.24391678044584872,
+              0.2423270897915599,
+              0.23772993078769028,
+              0.23694678033770672,
+              0.23452378670488164,
+              0.2345016280402548
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2007448",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.227008547008547,
+            "macro_f1": 0.389818353639759,
+            "n_pred_spells": 350.0,
+            "n_gt_spells": 235.0,
+            "spell_bootstrap_low": 0.19487179487179487,
+            "spell_bootstrap_high": 0.2577777777777778
+          },
+          "fair": {
+            "spell_f1_mean": 0.28317214700193427,
+            "macro_f1": 0.4407860060296966,
+            "n_pred_spells": 282.0,
+            "n_gt_spells": 235.0,
+            "spell_bootstrap_low": 0.24518375241779494,
+            "spell_bootstrap_high": 0.3218568665377176
+          },
+          "adaptation": {
+            "iterations": 7,
+            "converged": true,
+            "final_share": 0.29095477892740074,
+            "shares": [
+              0.33295342001890477,
+              0.30997174447202086,
+              0.3003956897167496,
+              0.29752939745710527,
+              0.29399427035240405,
+              0.2925489959617002,
+              0.2906700633686773,
+              0.29095477892740074
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2007721",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.2852459016393442,
+            "macro_f1": 0.4283517596858822,
+            "n_pred_spells": 352.0,
+            "n_gt_spells": 258.0,
+            "spell_bootstrap_low": 0.2518032786885246,
+            "spell_bootstrap_high": 0.320655737704918
+          },
+          "fair": {
+            "spell_f1_mean": 0.3581308411214953,
+            "macro_f1": 0.4695489582264932,
+            "n_pred_spells": 277.0,
+            "n_gt_spells": 258.0,
+            "spell_bootstrap_low": 0.3185046728971963,
+            "spell_bootstrap_high": 0.4007476635514019
+          },
+          "adaptation": {
+            "iterations": 8,
+            "converged": true,
+            "final_share": 0.24882439301226708,
+            "shares": [
+              0.3151115315759624,
+              0.28022899616167807,
+              0.27120357400812756,
+              0.26105780682788704,
+              0.2579055839979626,
+              0.2540896440882704,
+              0.2511459383978597,
+              0.24876676675112996,
+              0.24882439301226708
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2010085",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.2192893401015228,
+            "macro_f1": 0.39079169754878534,
+            "n_pred_spells": 354.0,
+            "n_gt_spells": 237.0,
+            "spell_bootstrap_low": 0.18815566835871406,
+            "spell_bootstrap_high": 0.25181049069373945
+          },
+          "fair": {
+            "spell_f1_mean": 0.2750476190476191,
+            "macro_f1": 0.44396118445579563,
+            "n_pred_spells": 288.0,
+            "n_gt_spells": 237.0,
+            "spell_bootstrap_low": 0.23691428571428572,
+            "spell_bootstrap_high": 0.3116190476190476
+          },
+          "adaptation": {
+            "iterations": 6,
+            "converged": true,
+            "final_share": 0.2218488032870385,
+            "shares": [
+              0.2793068570678329,
+              0.24158442675729747,
+              0.23158227237119733,
+              0.2250131378991493,
+              0.22374480594788584,
+              0.22207660192850837,
+              0.2218488032870385
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2011166",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.1724659606656581,
+            "macro_f1": 0.32940533228522023,
+            "n_pred_spells": 416.0,
+            "n_gt_spells": 245.0,
+            "spell_bootstrap_low": 0.14520423600605145,
+            "spell_bootstrap_high": 0.20033282904689861
+          },
+          "fair": {
+            "spell_f1_mean": 0.23649122807017547,
+            "macro_f1": 0.38144971396854127,
+            "n_pred_spells": 325.0,
+            "n_gt_spells": 245.0,
+            "spell_bootstrap_low": 0.20210526315789473,
+            "spell_bootstrap_high": 0.27087719298245616
+          },
+          "adaptation": {
+            "iterations": 7,
+            "converged": true,
+            "final_share": 0.27855502161079426,
+            "shares": [
+              0.3185337125601153,
+              0.2876879860518106,
+              0.28355303940550264,
+              0.28093582965199765,
+              0.27953279923229546,
+              0.2790032537443453,
+              0.2784694835956105,
+              0.27855502161079426
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2013725",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.22624671916010503,
+            "macro_f1": 0.4029485580570829,
+            "n_pred_spells": 453.0,
+            "n_gt_spells": 309.0,
+            "spell_bootstrap_low": 0.1989501312335958,
+            "spell_bootstrap_high": 0.25196850393700787
+          },
+          "fair": {
+            "spell_f1_mean": 0.33423019431988044,
+            "macro_f1": 0.46210588760357535,
+            "n_pred_spells": 360.0,
+            "n_gt_spells": 309.0,
+            "spell_bootstrap_low": 0.29952167414050823,
+            "spell_bootstrap_high": 0.36711509715994023
+          },
+          "adaptation": {
+            "iterations": 5,
+            "converged": true,
+            "final_share": 0.28568122597283346,
+            "shares": [
+              0.33986046513405294,
+              0.30858394965028507,
+              0.299500250919045,
+              0.28929674252809306,
+              0.2856546276985341,
+              0.28568122597283346
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2015213",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.25769805680119584,
+            "macro_f1": 0.4022176661434674,
+            "n_pred_spells": 386.0,
+            "n_gt_spells": 283.0,
+            "spell_bootstrap_low": 0.2283707025411061,
+            "spell_bootstrap_high": 0.28822122571001496
+          },
+          "fair": {
+            "spell_f1_mean": 0.28862478777589134,
+            "macro_f1": 0.4435869036706502,
+            "n_pred_spells": 306.0,
+            "n_gt_spells": 283.0,
+            "spell_bootstrap_low": 0.2553140916808149,
+            "spell_bootstrap_high": 0.32461799660441426
+          },
+          "adaptation": {
+            "iterations": 6,
+            "converged": true,
+            "final_share": 0.3190393074020018,
+            "shares": [
+              0.3468395138294017,
+              0.33114941795995184,
+              0.3231068627407102,
+              0.32252375685587303,
+              0.31978541198805926,
+              0.3190358169529593,
+              0.3190393074020018
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2016236",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.2670503597122302,
+            "macro_f1": 0.4287611686278154,
+            "n_pred_spells": 411.0,
+            "n_gt_spells": 284.0,
+            "spell_bootstrap_low": 0.23539568345323741,
+            "spell_bootstrap_high": 0.29812949640287767
+          },
+          "fair": {
+            "spell_f1_mean": 0.33409461663947804,
+            "macro_f1": 0.47518490586882606,
+            "n_pred_spells": 329.0,
+            "n_gt_spells": 284.0,
+            "spell_bootstrap_low": 0.29621533442088094,
+            "spell_bootstrap_high": 0.37128874388254485
+          },
+          "adaptation": {
+            "iterations": 5,
+            "converged": true,
+            "final_share": 0.2206272764286438,
+            "shares": [
+              0.2674288463079647,
+              0.2354059678048919,
+              0.22760442867514014,
+              0.22258204887212815,
+              0.22079232420981282,
+              0.2206272764286438
+            ]
+          }
+        },
+        {
+          "match": "skillcorner/2017461",
+          "source": "skillcorner",
+          "held_out_by": "final model",
+          "emission_weight": 0.5,
+          "stride": 5,
+          "raw": {
+            "spell_f1_mean": 0.17988165680473372,
+            "macro_f1": 0.37914278598345263,
+            "n_pred_spells": 439.0,
+            "n_gt_spells": 237.0,
+            "spell_bootstrap_low": 0.15502958579881657,
+            "spell_bootstrap_high": 0.20532544378698225
+          },
+          "fair": {
+            "spell_f1_mean": 0.2421585160202361,
+            "macro_f1": 0.4480404527908739,
+            "n_pred_spells": 356.0,
+            "n_gt_spells": 237.0,
+            "spell_bootstrap_low": 0.21180438448566613,
+            "spell_bootstrap_high": 0.27659359190556493
+          },
+          "adaptation": {
+            "iterations": 5,
+            "converged": true,
+            "final_share": 0.26589145477013953,
+            "shares": [
+              0.29661326379856434,
+              0.2769613007419732,
+              0.27007964769034043,
+              0.26764201242686814,
+              0.26616012510963494,
+              0.26589145477013953
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

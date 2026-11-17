@@ -1,0 +1,7 @@
+{
+  "method": "learned",
+  "use_cache": true,
+  "finalize": true,
+  "model": "models/learned/model.pkl",
+  "force_prekickoff_dead": true
+}
