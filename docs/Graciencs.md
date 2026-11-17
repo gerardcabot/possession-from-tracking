@@ -26,7 +26,7 @@ We built a learned pipeline that never sees a label of the provided match:
 | Asset | Use |
 |---|---|
 | Tactical tracking (ATD) and its metadata | **The only input** of the submitted method: positions of 46 anonymous slots and the ball, 25 fps, pitch size, graded blocks and kickoff anchors as published in the official `games.py` |
-| Smart Tagging | Not used by the submitted method. Tag-derived features were simulated on external matches and lost; the tags lag the play by about 6 s |
+| Smart Tagging | Not an input of the submitted method. Tag-derived features were simulated on external matches and lost; the tags lag the play by about 6 s. The tags are read only by label-free diagnostics of our match, used as a tie-break between candidates tied on external cross-validation until 2026-11-03 and as an alarm afterwards |
 | Tactical and broadcast video, audio | Not used. Ball detection from video and whistle detection from audio were considered as extra inputs and dropped (run-time cost, no external audio to train on) |
 | Broadcast tracking, homography | Not used. Imputing the ball from the broadcast feed had an estimated headroom of 0.02 to 0.04 spellF1, within the noise band |
 | Public five-minute ground truth | Pipeline check only. Nothing was fitted, tuned or selected on it |
@@ -43,7 +43,7 @@ None of it comes from the provided match, and no team member labelled any frame 
 | Metrica Sports sample data | 3 matches, about 0.43 million frames, 1,048 possessions | events annotated by Metrica Sports; frame labels derived from them by our code | training and validation | no licence file; source acknowledged as its README asks |
 | SkillCorner open data | 20 A-League matches | the provider's possession group; no dead-ball label | evaluation only, never trained on | MIT |
 
-Every training match is used from both teams' perspectives, so the model has no home bias. The decoder settings and the training set are chosen by nested leave-one-match-out cross-validation on these matches, and the boosting rounds of the team model by early stopping on whole held-out training matches.
+Every training match is used from both teams' perspectives, so the model has no home bias. The decoder settings are chosen by nested leave-one-match-out cross-validation on these matches, and the boosting rounds of the team model by early stopping on whole held-out training matches. The training set was chosen on held-out external scores; the team overrode the coded selection rule once, as the full report discloses.
 
 # 4. Possession rules implemented
 

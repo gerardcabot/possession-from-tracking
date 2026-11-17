@@ -1,6 +1,6 @@
 # External validation data
 
-Open tracking data used only to build a validation harness for the methods. Nothing here is used at
+Open tracking data about other games, used to train and validate the learned method. Nothing here is used at
 prediction time. Team decision (Oct 25 2026): external open data about other games is allowed, as
 `RULES.md` (lines 12-13, 61 and 84) permits, consistent with `docs/COMPLIANCE.md`.
 
